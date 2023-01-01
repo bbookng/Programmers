@@ -1,3 +1,4 @@
+# 반복되는지 확인하는 함수. 반복되는 횟수에 따라 재귀로 들어가 총 반복되는 횟수를 최종으로 return
 def Alzip(string, start, size):
     if string[start:start+size] == string[start+size:start+size*2]:
         return Alzip(string, start+size, size) + 1
@@ -5,20 +6,20 @@ def Alzip(string, start, size):
         return 1
 
 def solution(s):
-    answer = len(s)
-    for size in range(1, len(s)//2+2):
+    answer = len(s)                         # 아무것도 안한게 일단 최소값
+    for size in range(1, len(s)//2+2):      # 절반 이상의 size가 되면 아무것도 안한 값이 최솟값.
         idx = 0
         length = 0
-        while idx + size < len(s):
-            n = Alzip(s, idx, size)
-            if n > 1:
-                idx += size * n
-                length += size + len(str(n))
-            else:
-                idx += size * n
-                length += size * n
-        length += len(s) - idx
-        if length < answer:
+        while idx + size < len(s):          # 현재 index + size가 s의 총 길이보다 작을 때까지
+            n = Alzip(s, idx, size)         # 반복되는 횟수 계산
+            if n > 1:                       # 반복되는게 있다면
+                idx += size * n             # idx 는 반복된 size * n 만큼 뒤로
+                length += size + len(str(n))# 현재 길이는 반복된 횟수 숫자의 길이 + size
+            else:                           # 반복이 되지 않는다면
+                idx += size * n             # idx는 size 만큼만 뒤로
+                length += size * n          # 길이또한 size 그대로
+        length += len(s) - idx              # 현재 단위 길이에 전체 길이에서 남은 index 만큼을 빼주어 뒤에 남은 부분을 더해 총 길이 계산
+        if length < answer:                 # 최솟값 갱신
             answer = length
 
     return answer
