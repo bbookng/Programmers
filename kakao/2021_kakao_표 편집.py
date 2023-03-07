@@ -5,7 +5,6 @@ def solution(n, k, cmd):
     deleted = []
 
     for command in cmd:
-        print(command, '-> k :', k, ':', nums)
         # 현재 선택된 행에서 X칸 위에 있는 행을 선택합니다.
         if 'U' in command:
             cmd, cnt = command.split()
@@ -41,3 +40,16 @@ def solution(n, k, cmd):
 
 print(solution(8, 2, ["D 2","C","U 3","C","D 4","C","U 2","Z","Z"]))
 print(solution(8, 2, ["D 2","C","U 3","C","D 4","C","U 2","Z","Z","U 1","C"]))
+
+'''
+테스트 1 〉	통과 (745.07ms, 214MB)
+테스트 2 〉	통과 (743.22ms, 214MB)
+테스트 3 〉	통과 (734.58ms, 214MB)
+테스트 4 〉	통과 (722.18ms, 220MB)
+테스트 5 〉	통과 (663.33ms, 220MB)
+테스트 6 〉	통과 (651.34ms, 220MB)
+테스트 7 〉	통과 (172.82ms, 57MB)
+테스트 8 〉	통과 (190.53ms, 70.1MB)
+테스트 9 〉	통과 (722.42ms, 221MB)
+테스트 10 〉	통과 (712.92ms, 221MB)
+'''
