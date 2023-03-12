@@ -9,7 +9,7 @@ def solution(lines):
         h, m, s = map(float, s.split(':'))
 
         end_date = int(h * 3600 * 1000) + int(m * 60 * 1000) + int(s * 1000)
-        start_date = end_date - int(float(t.replace('s', '')) * 1000) - 1
+        start_date = end_date - int(float(t.replace('s', '')) * 1000) + 1
 
         log_list.append([start_date, end_date])
 
@@ -17,15 +17,17 @@ def solution(lines):
 
     arr = []
 
+    # 시작 시간이 앞 로그의 종료 시간보다 작거나 같을 때 겹침
     for log in log_list:
-        st = log[0]
+        std = log[0]
         while arr:
-            if st -1 >= arr[0][1]:
+            if std - 1000 >= arr[0][1]:
                 heapq.heappop(arr)
             else:
                 break
         heapq.heappush(arr, log)
         answer = max(answer, len(arr))
+
     return answer
 
 print(solution( [
