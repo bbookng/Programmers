@@ -20,6 +20,7 @@ def solution(play_time, adv_time, logs):
     for i in range(1, play_time):
         total[i] += total[i - 1]
 
+    # 누적
     for i in range(1, play_time):
         total[i] += total[i - 1]
 
