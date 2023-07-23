@@ -1,5 +1,3 @@
-import heapq
-
 def solution(priorities, location):
     answer = 0
     q = [(i, p) for i, p in enumerate(priorities)]
