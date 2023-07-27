@@ -1,0 +1,2 @@
+public class Solution8 {
+}
