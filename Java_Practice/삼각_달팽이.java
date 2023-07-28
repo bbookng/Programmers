@@ -1,4 +1,4 @@
-public class Solution {
+public class 삼각_달팽이 {
     private static final int[] dx = {0, 1, -1};
     private static final int[] dy = {1, 0, -1};
 
