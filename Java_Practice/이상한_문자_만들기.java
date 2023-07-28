@@ -1,4 +1,4 @@
-public class Solution {
+public class 이상한_문자_만들기 {
     public String solution(String s) {
         StringBuilder builder = new StringBuilder();
         boolean toUpper = true;
