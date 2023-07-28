@@ -1,4 +1,4 @@
-class 이진_변환_반복하기 {
+public class 이진_변환_반복하기 {
     private int countZeros(String s) {
         int zeros = 0;
         // String s를 문자열 배열로 만들고 순환
