@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Solution {
+public class 거리두기_확인하기 {
 
     private static final int[][] DIRECTIONS = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
 
