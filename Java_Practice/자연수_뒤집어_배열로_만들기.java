@@ -1,4 +1,4 @@
-class Solution {
+public class 자연수_뒤집어_배열로_만들기 {
     public int[] solution(long n) {
 
         // 입력받은 숫자를 문자열로 변환
