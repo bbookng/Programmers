@@ -1,4 +1,4 @@
-public class Solution {
+public class 문자열_압축 {
 
     public static int alzip(String string, int start, int size) {
         if (start + size * 2 <= string.length() && string.substring(start, start + size).equals(string.substring(start + size, start + size * 2))) {
