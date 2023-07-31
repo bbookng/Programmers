@@ -3,16 +3,20 @@ import java.util.*;
 public class 올바른_괄호 {
     boolean solution(String s) {
 
-        Queue<String> q = new LinkedList<>();
-        for (char i : s.toCharArray()) {
-            if (q.isEmpty() && i == ')') {
-                return false;
-            } else if (!q.isEmpty() && q.peek().equals("(") && i == ')' ) {
-                q.poll();
+        Stack<Character> stack = new Stack<>();
+
+        for (char c : s.toCharArray()) {
+            if (c == '(') {
+                stack.push(c);
             } else {
-                q.add(String.valueOf(i));
+                if (stack.isEmpty()) {
+                    return false;
+                } else {
+                    stack.pop();
+                }
             }
         }
-        return !q.isEmpty() ? false : true;
+
+        return stack.isEmpty();
     }
 }
