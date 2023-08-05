@@ -14,7 +14,6 @@ public class Solution16 {
         hanoi(n - 1, from, empty, process);
         hanoi(1, from, to, process);
         hanoi(n - 1, empty, to, process);
-
     }
     public int[][] solution(int n) {
         List<int[]> process = new ArrayList<>();
