@@ -24,7 +24,6 @@ public class 수포자 {
             if (maxValue == score[i]) {
                 answer.add(i+1);
             }
-
         }
 
         return answer.stream().mapToInt(i->i).toArray();
