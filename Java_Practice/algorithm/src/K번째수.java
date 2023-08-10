@@ -13,7 +13,7 @@ public class K번째수 {
     }
 
     // 책 풀이
-    public int sol(int[] array, int[][] commands) {
+    public int[] sol(int[] array, int[][] commands) {
         int[] answer = new int[commands.length];
 
         for (int i = 0; i < answer.length; i++) {
