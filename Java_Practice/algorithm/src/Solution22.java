@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class 불량_사용자 {
+public class Solution22 {
 
     // 방문 처리
     static boolean[] visited;
