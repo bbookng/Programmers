@@ -8,8 +8,6 @@ public class Solution25 {
             int idx = citations.length - i;
             if (citations[idx] >= i) return i;
         }
-
-
         return 0;
     }
 }
