@@ -9,6 +9,7 @@ public class Solution25 {
             if (citations[idx] >= i) return i;
         }
 
+
         return 0;
     }
 }
