@@ -1,7 +1,7 @@
 import java.util.HashSet;
 import java.util.Set;
 
-public class 소수_찾기 {
+public class Solution21 {
     static boolean[] visited;
     static Set<Integer> map = new HashSet<>();
 

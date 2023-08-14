@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class 불량_사용자 {
+public class Solution22 {
 
     // 방문 처리
     static boolean[] visited;
@@ -42,6 +42,20 @@ public class 불량_사용자 {
 
     }
 
+    /**
+     * 테스트 1 〉	통과 (8.98ms, 77.3MB)
+     * 테스트 2 〉	통과 (10.46ms, 86.2MB)
+     * 테스트 3 〉	통과 (14.48ms, 73.1MB)
+     * 테스트 4 〉	통과 (13.90ms, 94.4MB)
+     * 테스트 5 〉	통과 (250.81ms, 169MB)
+     * 테스트 6 〉	통과 (29.85ms, 84.3MB)
+     * 테스트 7 〉	통과 (17.15ms, 68MB)
+     * 테스트 8 〉	통과 (13.56ms, 83.9MB)
+     * 테스트 9 〉	통과 (12.53ms, 80.5MB)
+     * 테스트 10 〉	통과 (11.30ms, 78.5MB)
+     * 테스트 11 〉	통과 (10.63ms, 77.2MB)
+     */
+
     // 책 풀이
     private void count(int index, Set<String> banned, String[][] bans, Set<Set<String>> banSet) {
         if (index == bans.length) {
@@ -69,4 +83,18 @@ public class 불량_사용자 {
         count(0, new HashSet<>(), bans, banSet);
         return banSet.size();
     }
+
+    /**
+     * 테스트 1 〉	통과 (3.26ms, 72.2MB)
+     * 테스트 2 〉	통과 (5.33ms, 84.9MB)
+     * 테스트 3 〉	통과 (4.62ms, 74.6MB)
+     * 테스트 4 〉	통과 (4.14ms, 73.3MB)
+     * 테스트 5 〉	통과 (88.82ms, 118MB)
+     * 테스트 6 〉	통과 (9.73ms, 79.4MB)
+     * 테스트 7 〉	통과 (3.70ms, 72.6MB)
+     * 테스트 8 〉	통과 (3.94ms, 72.6MB)
+     * 테스트 9 〉	통과 (3.38ms, 78.9MB)
+     * 테스트 10 〉	통과 (3.87ms, 74.5MB)
+     * 테스트 11 〉	통과 (3.73ms, 74.8MB)
+     */
 }
