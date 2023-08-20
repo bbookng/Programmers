@@ -12,5 +12,6 @@ public class 가장_큰_수 {
                 })
                 .collect(Collectors.joining(""))
                 .replaceAll("^0+", "0");
+
     }
 }
