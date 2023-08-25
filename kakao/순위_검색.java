@@ -36,7 +36,6 @@ public class 순위_검색 {
             else
                 end = mid - 1;
         }
-
         return list.size() - start;
     }
 
