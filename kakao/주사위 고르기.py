@@ -40,6 +40,7 @@ def solution(dice):
         a_win_count = 0
         b_win_count = 0
 
+        # 3. 이분탐색. (A를 기준으로 B를 돌면서 찾는다.)
         for k in sum_a:
             a_win_count += binary_search_win(0, len(sum_b) - 1, k, sum_b)
             b_win_count += len(sum_b) - binary_search_lose(0, len(sum_b) - 1, k, sum_b)
@@ -50,9 +51,6 @@ def solution(dice):
         if b_win_count > max_value:
             max_value = b_win_count
             answer = b
-
-    # 3. 이분탐색. (A를 기준으로 B를 돌면서 찾는다.)
-
 
     return list(map(lambda x:x + 1, list(answer)))
 
