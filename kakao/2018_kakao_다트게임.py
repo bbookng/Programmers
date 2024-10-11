@@ -1,5 +1,4 @@
 def solution(dartResult):
-    answer = 0
     result = []
 
     tmp_number = ''
